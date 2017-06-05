@@ -1,5 +1,7 @@
 # TodoApp
 
+This project is based on this article from Sitepoint: https://www.sitepoint.com/angular-2-tutorial/
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
 ## Development server
