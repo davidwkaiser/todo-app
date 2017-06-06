@@ -40,3 +40,5 @@ I'm a leader, I'm responsible, and I'm low drama.
 See my portfolio at http://davidwkaiser.squarespace.com   
 See my LinkedIn at http://linkedin.com/in/davidwkaiser   
 And, well, you've already found my GitHub…
+
+I'm looking for an internship to start August 1 2017. See details at www.linkedin.com/pulse/announcing-daves-roll-your-own-apprenticeship-david-kaiser
