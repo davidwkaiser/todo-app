@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Todo} from './todo'; 
 
 @Injectable()
 export class TodoDataService {
@@ -9,7 +10,7 @@ export class TodoDataService {
   constructor() { }
 
   // Simulate POST /todos
-  addTodo(todo: Todo:): TodoDataService{
+  addTodo(todo: Todo): TodoDataService{
   if(!todo.id){
     todo.id = ++this.lastId;
   }
