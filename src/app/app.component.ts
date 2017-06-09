@@ -6,11 +6,11 @@ import {TodoDataService} from './todo-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [TodoDataService]
+  providers: []
 })
 export class AppComponent {
 
-  // newTodo: Todo = new Todo();
+  newTodo: Todo = new Todo();
 
   constructor(private todoDataService: TodoDataService){
   }
@@ -20,15 +20,16 @@ export class AppComponent {
   // this.newTodo = new Todo();
   // }
 
-  onAddTodo(todo: Todo){
-    this.todoDataService.addTodo(todo);
+  addTodo(){
+    this.todoDataService.addTodo(this.newTodo);
+    this.newTodo = new Todo();
   }
 
-  OnToggleTodoComplete(todo: Todo){
+  toggleTodoComplete(todo: Todo){
     this.todoDataService.toggleTodoComplete(todo);
   }
 
-  onRemoveTodo(todo: Todo){
+  removeTodo(todo: Todo){
     this.todoDataService.deleteTodoById(todo.id);
   }
 
