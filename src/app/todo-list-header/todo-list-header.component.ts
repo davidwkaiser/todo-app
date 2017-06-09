@@ -1,6 +1,5 @@
 // import { Component, OnInit } from '@angular/core';
 import { Component, Output, EventEmitter } from '@angular/core';
-//probably need to ad EventEmitter above
 import { Todo } from '../todo';
 
 @Component({

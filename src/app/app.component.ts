@@ -10,7 +10,7 @@ import {TodoDataService} from './todo-data.service';
 })
 export class AppComponent {
 
-  newTodo: Todo = new Todo();
+  // newTodo: Todo = new Todo();
 
   constructor(private todoDataService: TodoDataService){
   }
@@ -20,9 +20,9 @@ export class AppComponent {
   // this.newTodo = new Todo();
   // }
 
-  addTodo(){
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+  onAddTodo(todo: Todo){
+    this.todoDataService.addTodo(todo);
+    // this.newTodo = new Todo();
   }
 
   toggleTodoComplete(todo: Todo){
