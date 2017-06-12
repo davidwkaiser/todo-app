@@ -7,6 +7,7 @@ import { Todo } from '../todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent {
+
   @Input()
   todos: Todo[];
 
@@ -16,16 +17,15 @@ export class TodoListComponent {
   @Output()
   toggleComplete: EventEmitter<Todo> = new EventEmitter();
 
-  constructor() { }
+  constructor() {
+  }
 
-  onToggleTodoComplete(todo: Todo){
+  onToggleTodoComplete(todo: Todo) {
     this.toggleComplete.emit(todo);
   }
 
-  onRemoveTodo(todo: Todo){
+  onRemoveTodo(todo: Todo) {
     this.remove.emit(todo);
   }
-  // ngOnInit() {
-  // }
 
 }
