@@ -61,7 +61,7 @@ public deleteTodoById(todoId: number): Observable<null> {
 return this.http
 .delete(API_URL + '/todos/' + todoId)
 .map(response => null)
-.catch(this.handleError); 
+.catch(this.handleError);
 }
 
 private handleError(error: Response | any){
