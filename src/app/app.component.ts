@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Todo} from './todo'
-import {TodoDataService} from './todo-data.service';
+import { TodoDataService } from './todo-data.service';
+import { Todo } from './todo';
 
 @Component({
   selector: 'app-root',
@@ -9,58 +9,51 @@ import {TodoDataService} from './todo-data.service';
   providers: [TodoDataService]
 })
 export class AppComponent implements OnInit {
+
   todos: Todo[] = [];
-  // newTodo: Todo = new Todo();
 
-  constructor(private todoDataService: TodoDataService){
+  constructor(
+    private todoDataService: TodoDataService
+  ) {
   }
 
-  public ngOnInit(){
-    this.todoDataService.getAllTodos()
-    .subscribe(
-      (todos) => {
-        this.todos = todos;
-      }
-    );
-  }
-
-  // addTodo(){
-  // this.todoDataService.addTodo(this.newTodo);
-  // this.newTodo = new Todo();
-  // }
-
-  onAddTodo(todo){
+  public ngOnInit() {
     this.todoDataService
-    .addTodo(todo)
-    .subscribe(
-      (newTodo) => {
-        this.todos = this.todos.concat(newTodo);
-      }
-    );
-    // this.newTodo = new Todo();
+      .getAllTodos()
+      .subscribe(
+        (todos) => {
+          this.todos = todos;
+        }
+      );
   }
 
-  onToggleTodoComplete(todo){
+  onAddTodo(todo) {
     this.todoDataService
-    .toggleTodoComplete(todo)
-    .subscribe(
-      (updatedTodo) => {
-        todo = updatedTodo;
-      }
-    );
+      .addTodo(todo)
+      .subscribe(
+        (newTodo) => {
+          this.todos = this.todos.concat(newTodo);
+        }
+      );
   }
 
-  onRemoveTodo(todo){
+  onToggleTodoComplete(todo) {
     this.todoDataService
-    .deleteTodoById(todo.id)
-    .subscribe(
-      (_) => {
-        this.todos = this.todos.filter((t)=>t.id !==todo.id);
-      }
-    );
+      .toggleTodoComplete(todo)
+      .subscribe(
+        (updatedTodo) => {
+          todo = updatedTodo;
+        }
+      );
   }
 
-  // get todos(){
-  // return this.todoDataService.getAllTodos();
-  // }
+  onRemoveTodo(todo) {
+    this.todoDataService
+      .deleteTodoById(todo.id)
+      .subscribe(
+        (_) => {
+          this.todos = this.todos.filter((t) => t.id !== todo.id);
+        }
+      );
+  }
 }

@@ -8,7 +8,8 @@ describe('TodoListFooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoListFooterComponent ]
+      declarations: [ TodoListFooterComponent ],
+      providers: []
     })
     .compileComponents();
   }));
