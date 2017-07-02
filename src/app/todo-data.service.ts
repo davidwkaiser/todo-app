@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
-import {Todo} from './todo';
+import { Todo } from './todo';
 import { ApiService } from './api.service';
 import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class TodoDataService {
-  lastId: number = 0;
-
-  todos: Todo[] = [];
 
   constructor(
     private api: ApiService
-  ) { }
+  ) {
+  }
 
   // Simulate POST /todos
   addTodo(todo: Todo): Observable<Todo> {
@@ -29,17 +27,17 @@ export class TodoDataService {
   }
 
   // Simulate GET /todos
-  getAllTodos(): Observable<Todo[]>{
-  return this.api.getAllTodos();
+  getAllTodos(): Observable<Todo[]> {
+    return this.api.getAllTodos();
   }
 
   // Simulate GET /todos/:id
-  getTodoById(todoId: number): Observable<Todo>{
-  return this.api.getTodoById(todoId);
+  getTodoById(todoId: number): Observable<Todo> {
+    return this.api.getTodoById(todoId);
   }
 
-  // Toggle todo complete
-  toggleTodoComplete(todo: Todo){
+  // Toggle complete
+  toggleTodoComplete(todo: Todo) {
     todo.complete = !todo.complete;
     return this.api.updateTodo(todo);
   }

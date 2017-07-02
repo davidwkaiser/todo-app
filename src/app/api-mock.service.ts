@@ -6,10 +6,13 @@ import 'rxjs/add/observable/of';
 @Injectable()
 export class ApiMockService {
 
-  constructor() { }
+  constructor(
+  ) {
+  }
+
   public getAllTodos(): Observable<Todo[]> {
     return Observable.of([
-      new Todo({id: 1, title: "Read article", complete: false})
+      new Todo({id: 1, title: 'Read article', complete: false})
     ]);
   }
 
@@ -19,15 +22,15 @@ export class ApiMockService {
     );
   }
 
-  public getTodoById(todoId: number): Observable<Todo>{
+  public getTodoById(todoId: number): Observable<Todo> {
     return Observable.of(
-      new Todo ({id: 1, title: 'Read article', complete: false})
+      new Todo({id: 1, title: 'Read article', complete: false})
     );
   }
 
-  public updateTodo(todo: Todo): Observable <Todo> {
+  public updateTodo(todo: Todo): Observable<Todo> {
     return Observable.of(
-      new Todo({ id: 1, title: "Read article", complete: false})
+      new Todo({id: 1, title: 'Read article', complete: false})
     );
   }
 
