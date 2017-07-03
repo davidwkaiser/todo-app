@@ -2,6 +2,8 @@
 
 This project is based on this article from Sitepoint: https://www.sitepoint.com/angular-2-tutorial/
 
+The first three sections are complete. The fourth and fifth sections will be published shortly. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.4.
 
 ## Development server
